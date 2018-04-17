@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grisfondo"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.manue.instabot.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/barra1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:isb_max="100"
+        app:isb_min="1"
+        app:isb_progress="50"
+        app:isb_show_indicator="true"
+        app:isb_thumb_color="@color/rojo"
+        app:isb_indicator_color="@color/rojo"
+        app:isb_thumb_width="18dp"
+        app:isb_track_background_bar_color="@color/negro"
+        app:isb_track_progress_bar_color="@color/negro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/hastag1"
+        android:layout_width="146dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="22dp"
+        android:background="@color/blanco"
+        android:hint="@string/hashtagName"
+        android:inputType="textCapWords|textPersonName"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra1" />
+
+    <Button
+        android:id="@+id/botonLiker"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/amarillo"
+        android:fontFamily="@font/meriendaone"
+        android:text="LIKER"
+        android:onClick="metodoLiker"
+        android:textColor="@color/negro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra1" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/barra2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:isb_max="100"
+        app:isb_min="1"
+        app:isb_progress="50"
+        app:isb_show_indicator="true"
+        app:isb_thumb_color="@color/rojo"
+        app:isb_indicator_color="@color/rojo"
+        app:isb_thumb_width="18dp"
+        app:isb_track_background_bar_color="@color/negro"
+        app:isb_track_progress_bar_color="@color/negro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hastag1"/>
+
+    <EditText
+        android:id="@+id/hastag2"
+        android:layout_width="146dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="22dp"
+        android:background="@color/blanco"
+        android:hint="@string/hashtagName"
+        android:inputType="textCapWords|textPersonName"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra2" />
+
+    <Button
+        android:id="@+id/botonCopyFollower"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/amarillo"
+        android:text="COPY FOLLOWERS"
+        android:textColor="@color/negro"
+        android:fontFamily="@font/meriendaone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra2" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/barra3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:isb_max="100"
+        app:isb_min="1"
+        app:isb_progress="50"
+        app:isb_show_indicator="true"
+        app:isb_thumb_color="@color/rojo"
+        app:isb_indicator_color="@color/rojo"
+        app:isb_thumb_width="18dp"
+        app:isb_track_background_bar_color="@color/negro"
+        app:isb_track_progress_bar_color="@color/negro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hastag2"/>
+
+    <Button
+        android:id="@+id/botonUnfollower"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/amarillo"
+        android:text="UNFOLLOWER"
+        android:fontFamily="@font/meriendaone"
+        android:textColor="@color/negro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra3" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/blanco"
+        android:ems="10"
+        android:textSize="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:gravity="top"
+        android:paddingBottom="10dp"
+        android:inputType="textMultiLine"
+        android:hint="Hashtag Hashtag Hashtag Hashtag..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/botonUnfollower" />
+
+    <Button
+        android:id="@+id/botonAutobot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/meriendaone"
+        android:backgroundTint="@color/amarillo"
+        android:text="AUTOBOT"
+        android:textColor="@color/negro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+</android.support.constraint.ConstraintLayout>
